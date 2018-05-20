@@ -1,6 +1,6 @@
 ## vue-webpack-boilerplate
 > This template based on vue2.0
-鸣谢[vuejs-template](https://github.com/vuejs-templates/webpack)
+> 鸣谢: [vuejs-template](https://github.com/vuejs-templates/webpack)
 
 
 ## Usage
@@ -17,14 +17,14 @@ $ npm build or yarn build (for prod)
 
 ## What's Included
 - npm run dev:
-  - Webpack + vue-loader for single file Vue components.
+  - [Webpack](https://github.com/webpack/webpack) + [vue-loader](https://github.com/vuejs/vue-loader) for single file Vue components.
   - hot-reload
   - Source maps
-  - Local Mock
+  - Local Mock base on [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 - npm run build:
-  - JavaScript minified with UglifyJS
-  - HTML minified with html-webpack-plugin
-  - Lint-on-save with ESLint
+  - JavaScript minified with webpack
+  - HTML minified with [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
+  - Lint-on-save with [ESLint](https://github.com/eslint/eslint)
 - npm run lint: eslint --ext .js in src catalogue
 - npm run deploy: use [deploy-kit](https://github.com/xiaoyann/deploy-kit) to deploy project
 - npm run hotdeploy: hot-deploy
