@@ -1,0 +1,32 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "description": "{{ description }}",
+  "author": "{{ author }",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/server.js",
+    "build": "rm -rf dist/* && node scripts/build.js",
+    "deploy": "deploy-sftp",
+    "hotdeploy": "node scripts/deploy.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "baobab-ui": "^1.0.7",
+    "fastclick": "^1.0.6",
+    "raven-js": "^3.25.2",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  }
+}
