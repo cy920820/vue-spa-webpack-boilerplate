@@ -22,10 +22,7 @@ module.exports = {
       }
 
       return options.inverse(this)
-    },
-    template_version() {
-      return templateVersion
-    },
+    }
   },
   // 收集用户的自定义数据, vue-cli中间件askQuestions使用
   // 用户输入完成之后, template 目录下的所有文件将会用 Handlebars 进行渲染. 用户输入的数据会作为模板渲染时的使用数据:
@@ -163,21 +160,16 @@ module.exports = {
     // 根据条件过滤文件 vue-cli中间件filterFiles使用
     // filters字段是一个包含文件过滤规则的对象，键用于定义符合minimatch glob pattern规则的过滤器，键值是prompts中用户的输入值或表达式
     filters: {
-      '.eslintrc.json': 'lint',
-      '.eslintignore': 'lint',
-      // 'config/test.env.js': 'unit || e2e',
-      // 'build/webpack.test.conf.js': "unit && runner === 'karma'",
-      // 'test/unit/**/*': 'unit',
-      // 'test/unit/index.js': "unit && runner === 'karma'",
-      // 'test/unit/jest.conf.js': "unit && runner === 'jest'",
-      // 'test/unit/karma.conf.js': "unit && runner === 'karma'",
-      // 'test/unit/specs/index.js': "unit && runner === 'karma'",
-      // 'test/unit/setup.js': "unit && runner === 'jest'",
-      // 'test/e2e/**/*': 'e2e',
-      'src/router/**/*': 'router',
-      'src/**/*.css': '!stylus',
-      'src/**/*.styl': 'stylus',
-      'src/scripts/sentry.js': 'sentry'
+      ".eslintrc.js": "lint",
+      ".eslintignore": "lint",
+      "config/test.env.js": "unit || e2e",
+      "test/unit/**/*": "unit",
+      "build/webpack.test.conf.js": "unit",
+      "test/e2e/**/*": "e2e",
+      "src/router/**/*": "router",
+      "src/**/*.styl": "stylus",
+      "src/**/*.css": "!stylus",
+      "src/sentry.js": "sentry"
     },
 
     // 完成渲染时的回调
@@ -201,6 +193,6 @@ module.exports = {
     //     printMessage(data, chalk)
     //   }
     // }
-    "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}yarn install\n  yarn run dev\n\nDocumentation can be found at https://github.com/Cui-y/vue-webpack-template"
+    completeMessage: "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}yarn install\n  yarn run dev\n\nDocumentation can be found at https://github.com/Cui-y/vue-webpack-template"
   }
 }
