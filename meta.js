@@ -4,7 +4,6 @@ const fs = require('fs')
 const {
   sortDependencies,
   installDependencies,
-  runLintFix,
   printMessage,
 } = require('./utils')
 
@@ -192,9 +191,6 @@ module.exports = {
   
       if (data.autoInstall) {
         installDependencies(cwd, data.autoInstall, green)
-          .then(() => {
-            return runLintFix(cwd, data, green)
-          })
           .then(() => {
             printMessage(data, green)
           })
