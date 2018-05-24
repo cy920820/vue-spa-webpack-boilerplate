@@ -2,7 +2,7 @@
   "name": "{{name}}",
   "version": "1.0.0",
   "description": "{{description}}",
-  "author": "{{author}",
+  "author": "{{author}}",
   "scripts": {
     "start": "node scripts/server.js",
     "build": "rm -rf dist/* && node scripts/build.js",
