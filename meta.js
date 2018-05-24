@@ -182,24 +182,25 @@ module.exports = {
 
     // 完成渲染时的回调
 
-    complete: function(data, { chalk }) { // data, helpers 都是由vue-cli传入
-      const green = chalk.green
+    // complete: function(data, { chalk }) { // data, helpers 都是由vue-cli传入
+    //   const green = chalk.green
   
-      sortDependencies(data, green)
+    //   sortDependencies(data, green)
   
-      const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
+    //   const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
   
-      if (data.autoInstall) {
-        installDependencies(cwd, data.autoInstall, green)
-          .then(() => {
-            printMessage(data, green)
-          })
-          .catch(e => {
-            console.log(chalk.red('Error:'), e)
-          })
-      } else {
-        printMessage(data, chalk)
-      }
-    }
+    //   if (data.autoInstall) {
+    //     installDependencies(cwd, data.autoInstall, green)
+    //       .then(() => {
+    //         printMessage(data, green)
+    //       })
+    //       .catch(e => {
+    //         console.log(chalk.red('Error:'), e)
+    //       })
+    //   } else {
+    //     printMessage(data, chalk)
+    //   }
+    // }
+    "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}yarn install\n  yarn run dev\n\nDocumentation can be found at https://github.com/Cui-y/vue-webpack-template"
   }
 }
