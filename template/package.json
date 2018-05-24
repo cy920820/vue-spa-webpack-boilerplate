@@ -1,5 +1,5 @@
 {
-  "name": "name",
+  "name": "{{name}}",
   "version": "1.0.0",
   "description": "{{ description }}",
   "author": "{{ author }",
@@ -13,20 +13,32 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
+    {{#baobabui}}
     "baobab-ui": "^1.0.7",
+    {{/baobabui}}
+    {{#fastclick}}
     "fastclick": "^1.0.6",
+    {{/fastclick}}
+    {{#sentry}}
     "raven-js": "^3.25.2",
+    {{/sentry}}
     "vue": "^2.5.16",
+    {{#router}}
     "vue-router": "^3.0.1"
+    {{/router}}
   },
   "devDependencies": {
+    {{#lint}}
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
+    {{/lint}}
+    {{#stylus}}
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
+    {{/stylus}}
   }
 }
