@@ -178,7 +178,7 @@ module.exports = {
       'src/router/**/*': 'router',
       'src/**/*.css': '!stylus',
       'src/**/*.styl': 'stylus',
-      'src/sentry.js': 'sentry'
+      'src/scripts/sentry.js': 'sentry'
     },
 
     // 完成渲染时的回调
