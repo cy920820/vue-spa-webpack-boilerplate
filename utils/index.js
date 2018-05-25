@@ -73,10 +73,10 @@ To get started:
   ${yellow(
     `${data.inPlace ? '' : `cd ${data.destDirName}\n  `}${installMsg(
       data
-    )}${lintMsg(data)}npm run dev`
+    )}${lintMsg(data)}npm run start or yarn start`
   )}
   
-Documentation can be found at https://vuejs-templates.github.io/webpack
+Documentation can be found at https://github.com/Cui-y/vue-webpack-template
 `
   console.log(message)
 }
