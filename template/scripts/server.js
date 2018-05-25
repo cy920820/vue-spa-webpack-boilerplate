@@ -37,3 +37,4 @@ server.listen(port, undefined, () => {
 })
 
 // start mock server
+require('../mock/app')(server.app)
