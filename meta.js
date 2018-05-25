@@ -166,12 +166,8 @@ module.exports = {
     // 根据条件过滤文件 vue-cli中间件filterFiles使用
     // filters字段是一个包含文件过滤规则的对象，键用于定义符合minimatch glob pattern规则的过滤器，键值是prompts中用户的输入值或表达式
     filters: {
-      ".eslintrc.js": "lint",
+      ".eslintrc.json": "lint",
       ".eslintignore": "lint",
-      "config/test.env.js": "unit || e2e",
-      "test/unit/**/*": "unit",
-      "build/webpack.test.conf.js": "unit",
-      "test/e2e/**/*": "e2e",
       "src/router/**/*": "router",
       "src/**/*.styl": "stylus",
       "src/**/*.css": "!stylus",
