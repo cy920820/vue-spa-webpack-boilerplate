@@ -1,7 +1,7 @@
 // project global config
+const pkg = require('./package.json')
 
 // pkg version
-const pkg = require('./package.json')
 exports.version = pkg.version
 
 // alias
@@ -24,3 +24,6 @@ exports.root = __dirname
 
 // public path
 exports.publicPath = ''
+
+// extensions
+exports.extensions = ['.js', '.tpl', '.styl']

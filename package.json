@@ -2,17 +2,28 @@
   "name": "vue-webpack-template",
   "version": "1.0.0",
   "description": "A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cui-y/vue-webpack-template.git"
   },
-  "keywords": ["vue-template", "vue-cli"],
+  "keywords": [
+    "vue-template",
+    "vue-cli"
+  ],
   "author": "Cui-y",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Cui-y/vue-webpack-template/issues"
   },
-  "homepage": "https://github.com/Cui-y/vue-webpack-template#readme"
+  "homepage": "https://github.com/Cui-y/vue-webpack-template#readme",
+  "devDependencies": {
+    "inline-manifest-webpack-plugin": "^4.0.0",
+    "url-loader": "^1.0.1",
+    "vue-template-compiler": "^2.5.16",
+    "vue-template-loader": "^0.4.1",
+    "webpack": "^4.8.3",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+  }
 }
