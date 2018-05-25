@@ -19,8 +19,7 @@ module.exports = Mixins({
   context: path.join(config.root, 'src'),
 
   // 入口文件(建议使用脚本扫描目录生成, 手动添加维护性较差): 划分的chunks
-  entry: {
-  },
+  entry: helper.pickeEntries(),
 
   // 输出结果
   output: {

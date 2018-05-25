@@ -16,5 +16,8 @@ module.exports = (config) => {
     test: /\.styl$/,
     use: helper.cssLoaders('stylus', extractAppCss)
   })
+
+  config.plugins.push(extractLibCss)
+  config.plugins.push(extractAppCss)
   return config
 }

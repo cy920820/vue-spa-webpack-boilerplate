@@ -1,4 +1,7 @@
 const config = require('../../config')
+const path = require('path')
+const glob = require('glob')
+const os = require('os')
 const env = process.env.NODE_ENV
 const isProd = env === 'production'
 /**
@@ -52,4 +55,40 @@ exports.cssLoaders = (name, extract) => {
   }
 
   return loaders
+}
+
+/**
+ * pickeEntries
+ */
+
+exports.pickeEntries = () => {
+  let entry = {}
+  glob.sync('./entry/*.js', {
+    cwd: path.join(config.root, 'src')
+  })
+  .map((file) => {
+    const parts = path.parse(file)
+    entry[parts.name] = [ file ]
+  })
+
+  return entry
+}
+
+/**
+ * get Host
+ */
+
+exports.getHost = () => {
+  let IPv4 = '127.0.0.1'
+  let networkInterfaces = os.networkInterfaces()
+  for (let key in networkInterfaces) {
+    networkInterfaces[key].some((interface) => {
+      if (interface.family == 'IPv4' && key == 'en8') {
+        IPv4 = interface.address
+        return true
+      }
+    })
+  }
+
+  return IPv4
 }
