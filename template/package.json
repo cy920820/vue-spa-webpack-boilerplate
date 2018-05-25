@@ -4,6 +4,9 @@
   "description": "{{description}}",
   "author": "{{author}}",
   "scripts": {
+    {{#lint}}
+    "lint": "eslint --ext .js src",
+    {{/lint}}
     "start": "node scripts/server.js",
     "build": "rm -rf dist/* && node scripts/build.js",
     "deploy": "deploy-sftp",
