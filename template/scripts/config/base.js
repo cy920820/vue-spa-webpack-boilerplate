@@ -13,7 +13,8 @@ const isProd = env === 'production'
 const helper = require('../helper')
 const webpack = require('webpack')
 const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
-module.exports = {
+const Mixins = require('../mixins')
+module.exports = Mixins({
   // webpack主目录
   context: path.join(config.root, 'src'),
 
@@ -103,3 +104,4 @@ module.exports = {
     })
   ]
 }
+)
