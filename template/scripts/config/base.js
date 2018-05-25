@@ -6,11 +6,11 @@
  *    - 避免频繁的chunk内容变动: 合理分割公共模块 | 添加代码分割点(Code Splitting)
  */
 'use strict'
-const path = require('fs')
+const path = require('path')
 const config = require('../../config')
 const env = process.env.NODE_ENV
 const isProd = env === 'production'
-const helper = require('../helper')
+const utils = require('../utils')
 const webpack = require('webpack')
 const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
 const Mixins = require('../mixins')
@@ -19,7 +19,7 @@ module.exports = Mixins({
   context: path.join(config.root, 'src'),
 
   // 入口文件(建议使用脚本扫描目录生成, 手动添加维护性较差): 划分的chunks
-  entry: helper.pickeEntries(),
+  entry: utils.pickeEntries(),
 
   // 输出结果
   output: {
@@ -43,7 +43,7 @@ module.exports = Mixins({
     extensions: config.extensions,
 
     // 起别名
-    alias: helper.alias()
+    alias: utils.alias()
   },
 
   // 模块配置
@@ -102,5 +102,4 @@ module.exports = Mixins({
       name: 'webpackManifest'
     })
   ]
-}
-)
+})

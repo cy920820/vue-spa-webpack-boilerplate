@@ -1,6 +1,7 @@
 'use strict'
-const shell = require('shelljs')
-shell.echo(env.NODE_ENV = 'development')
+// const shell = require('shelljs')
+// shell.echo(env.NODE_ENV = 'development')
+process.env.NODE_ENV = 'development'
 const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
 const webpackConfig = require('./base')

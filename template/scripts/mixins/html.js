@@ -11,21 +11,22 @@ const htmlPlugins = [
     template: 'html/index.html',
     chunks: ['vendor', 'main']
   }
-].map((options) => {
+].map((option) => {
   if (process.env.NODE_ENV === 'production') {
-    options.minify = {
+    option.minify = {
       collapseWhitespace: true,
       collapseInlineTagWhitespace: true,
       minifyJS: true,
       removeComments: true
     }
   } else {
+    options.chunks.push('server-client')
   }
 
-  options.apiPath = config.apiPath
-  options.versiton = config.version
+  option.apiPath = config.apiPath
+  option.versiton = config.version
 
-  return new HtmlWebpackPlugin(options)
+  return new HtmlWebpackPlugin(option)
 })
 
 module.exports = (config) => {

@@ -2,19 +2,19 @@
  * 统一维护extract-text-webpack-plugin插件
  */
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const extractLibCss = ExtractTextPlugin('css/lib.[contenthash].css')
-const extractAppCss = ExtractTextPlugin('css/app.[contenthash].css')
-const helper = require('../utils')
+const extractLibCss = new ExtractTextPlugin('css/lib.[contenthash].css')
+const extractAppCss = new ExtractTextPlugin('css/app.[contenthash].css')
+const utils = require('../utils')
 
 module.exports = (config) => {
   config.module.rules.push({
     test: /\.css$/,
-    use: helper.cssLoaders('css', extractLibCss)
+    use: utils.cssLoaders('css', extractLibCss)
   })
 
   config.module.rules.push({
     test: /\.styl$/,
-    use: helper.cssLoaders('stylus', extractAppCss)
+    use: utils.cssLoaders('stylus', extractAppCss)
   })
 
   config.plugins.push(extractLibCss)
