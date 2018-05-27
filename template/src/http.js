@@ -25,6 +25,7 @@ axios.interceptors.request.use(function (config) {
 // Add filter retcode
 let isOk = (retcode) => {
   return [
+    '2000000'
   ].indexOf(retcode) > -1
 }
 
