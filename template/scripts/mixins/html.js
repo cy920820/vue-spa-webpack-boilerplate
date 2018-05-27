@@ -25,7 +25,7 @@ const htmlPlugins = [
   }
 
   option.apiPath = config.apiPath
-  option.versiton = config.version
+  option.appVersion = config.appVersion
 
   return new HtmlWebpackPlugin(option)
 })
