@@ -36,3 +36,8 @@ You can fork this repo to create your own boilerplate and use it with  `vue-cli`
 ```
 vue init username/repo my-project
 ```
+
+## Todos
+- [ ] Sentry
+- [ ] Unit
+- [ ] e2e
