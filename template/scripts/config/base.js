@@ -25,7 +25,7 @@ module.exports = Mixins({
   output: {
     path: path.resolve(config.root, 'dist'), // 必须是绝对路径
     filename: isProd ? 'js/[name].[chunkhash:8].js' : 'js/[name].js', // name: 用于多个入口的输出文件模板; chunkhash: 用于长期缓存,根据其chunk相关内容去生成
-    chunkFileName: isProd ? '[name].[chunkhash:8].js' : '[name].js', // 附加分块(除入口文件之外的)的文件名模板; 多用于模块异步按需加载
+    // chunkFileName: isProd ? '[name].[chunkhash:8].js' : '[name].js', // 附加分块(除入口文件之外的)的文件名模板; 多用于模块异步按需加载
     publicPath: isProd ? config.publicPath : '/' // 用于生产环境下
   },
 
@@ -87,6 +87,12 @@ module.exports = Mixins({
       'process.env.NODE_ENV': `"${env}"` // 使用双重引号 或者 JSON.stringify
     }),
 
+    // 为避免增加一个manifest.js文件的请求, 可以借助工具内联在html script中, 提高页面的加载速度
+    // 该插件依赖html-webpack-plugin 和 公共chunk manifest
+    new InlineManifestWebpackPlugin({
+      name: 'webpackManifest'
+    }),
+
     // 由于webpack生成的模块ID不稳定, 需要借助工具保证模块ID稳定, 从而达到chunkhash稳定, 实现webpack持久化缓存最优
     new webpack.HashedModuleIdsPlugin(),
 
@@ -94,12 +100,6 @@ module.exports = Mixins({
     new webpack.optimize.CommonsChunkPlugin({
       names: ['manifest', 'vendor'].reverse(), // 提取公共模块到vendor, 将webpack runtime提取到名为manifest的公共chunk中
       minChunks: Infinity // 公共Chunk只包含entry中指定的模块
-    }),
-
-    // 为避免增加一个manifest.js文件的请求, 可以借助工具内联在html script中, 提高页面的加载速度
-    // 该插件依赖html-webpack-plugin 和 公共chunk manifest
-    new InlineManifestWebpackPlugin({
-      name: 'webpackManifest'
     })
   ]
 })

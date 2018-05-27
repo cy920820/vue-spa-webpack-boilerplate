@@ -9,12 +9,12 @@ let port = 8080
 let host = getHost()
 let address = `http://${host}:${port}`
 let useHotReload = false
-let compiler = webpack(webpackConfig)
 
 const serverClients = [
   `webpack-dev-server/client?${address}`
 ]
 
+// the config of HMR
 if (useHotReload) {
   serverClients.push('webpack/hot/dev-server')
   webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin())
@@ -23,7 +23,7 @@ if (useHotReload) {
 
 webpackConfig.entry['server-client'] = serverClients
 
-let server = new Server(compiler, {
+let server = new Server(webpack(webpackConfig), {
   hot: useHotReload,
   contentBase: webpackConfig.output.path,
   stats: {

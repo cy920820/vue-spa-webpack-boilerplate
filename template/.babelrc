@@ -1,0 +1,11 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "browsers": ["iOS >= 7", "Android >= 4.2"],
+      "useBuiltIns": false,
+      "debug": false
+    }]
+  ],
+  "plugins": ["transform-object-rest-spread"]
+}
