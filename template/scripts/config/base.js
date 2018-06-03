@@ -74,7 +74,8 @@ module.exports = Mixins({
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: 'images/[name].[hash:8].[ext]'
+          name: 'images/[name].[hash:12].[ext]',
+          publicPath: './images'
         }
       }
     ]
