@@ -10,7 +10,6 @@
 $ npm install -g vue-cli
 $ vue init Cui-y/vue-webpack-template my-project
 $ cd my-project
-$ npm install or yarn install
 $ npm start or yarn start (for dev)
 $ npm build or yarn build (for prod)
 ```
