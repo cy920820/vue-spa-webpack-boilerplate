@@ -4,10 +4,6 @@
 
 import Vue from 'vue'
 import App from 'views/app'
-{{#router}}
-// 引入vue-router
-import router from '../router'
-{{/router}}
 {{#baobabui}}
 // 引入内部组件库
 import 'baobab-ui/lib/baobab-ui.css'
@@ -19,6 +15,15 @@ Vue.use(BaobabUI)
 import FastClick from 'fastclick'
 FastClick.attach(document.body)
 {{/fastclick}}
+{{#router}}
+// 引入vue-router
+import router from '../router'
+// 设置全局守卫
+router.beforeEach((to, from, next) => {
+  // ...
+  next()
+})
+{{/router}}
 
 window.app = new Vue({
   el: '#app',
