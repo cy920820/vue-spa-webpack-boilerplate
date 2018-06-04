@@ -40,3 +40,5 @@ vue init username/repo my-project
 - [ ] Sentry
 - [ ] Unit
 - [ ] e2e
+- [ ] webpack 4.x
+- [ ] 路由懒加载
