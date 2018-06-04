@@ -21,4 +21,18 @@ const routes = [
   }
 ]
 
-export default new Router({ routes })
+export default new Router({
+  routes,
+  // add scrollBehavior
+  scrollBehavior(to, from, savedPosition){
+    // return desired position
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return {
+        x: 0,
+        y: 0
+      }
+    }
+  }
+})
