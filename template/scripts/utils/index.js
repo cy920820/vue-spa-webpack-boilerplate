@@ -83,7 +83,7 @@ exports.getHost = () => {
   let networkInterfaces = os.networkInterfaces()
   for (let key in networkInterfaces) {
     networkInterfaces[key].some((interface) => {
-      if (interface.family == 'IPv4' && key == 'en8') {
+      if (interface.family == 'IPv4' && key == 'en0') {
         IPv4 = interface.address
         return true
       }
