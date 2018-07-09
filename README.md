@@ -1,6 +1,6 @@
 ## vue-webpack-boilerplate
 > This template based on vue2.0
-> 鸣谢: [vuejs-template](https://github.com/vuejs-templates/webpack)
+> Acknowledgements: [vuejs-template](https://github.com/vuejs-templates/webpack)
 
 
 ## Usage
@@ -41,4 +41,4 @@ vue init username/repo my-project
 - [ ] Unit
 - [ ] e2e
 - [ ] webpack 4.x
-- [ ] 路由懒加载
+- [ ] Routing lazy loading
