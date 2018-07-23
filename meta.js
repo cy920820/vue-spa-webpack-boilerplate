@@ -5,7 +5,7 @@ const {
   sortDependencies,
   installDependencies,
   runLintFix,
-  printMessage,
+  printMessage
 } = require('./utils')
 
 const pkg = require('./package.json')
@@ -27,9 +27,9 @@ module.exports = {
 
     template_version() {
       return templateVersion
-    },
+    }
   },
-  
+
   // 收集用户的自定义数据, vue-cli中间件askQuestions使用
   // 用户输入完成之后, template 目录下的所有文件将会用 Handlebars 进行渲染. 用户输入的数据会作为模板渲染时的使用数据:
   // 主要体现在template/package.json的一些Key Value. 用 Handlebars 进行渲染
@@ -82,8 +82,7 @@ module.exports = {
       when: 'lint',
       type: 'list',
       message: 'Pick an ESLint preset',
-      choices: [
-        {
+      choices: [{
           name: 'Standard (https://github.com/standard/standard)',
           value: 'standard',
           short: 'Standard'
@@ -142,10 +141,8 @@ module.exports = {
 
     autoInstall: {
       type: 'list',
-      message: 
-        'Should we run `npm install` for you after the project has been created? (recommended)',
-      choices: [
-        {
+      message: 'Should we run `npm install` for you after the project has been created? (recommended)',
+      choices: [{
           name: 'Yes, use NPM',
           value: 'npm',
           short: 'npm',
@@ -161,42 +158,44 @@ module.exports = {
           short: 'no',
         }
       ]
-    },
+    }
   },
 
   // 根据条件过滤文件 vue-cli中间件filterFiles使用
-    // filters字段是一个包含文件过滤规则的对象，键用于定义符合minimatch glob pattern规则的过滤器，键值是prompts中用户的输入值或表达式
-    filters: {
-      ".eslintrc.json": "lint",
-      ".eslintignore": "lint",
-      "src/router/**/*": "router",
-      "src/**/*.styl": "stylus",
-      "src/**/*.css": "!stylus",
-      "src/sentry.js": "sentry"
-    },
+  // filters字段是一个包含文件过滤规则的对象，键用于定义符合minimatch glob pattern规则的过滤器，键值是prompts中用户的输入值或表达式
+  filters: {
+    ".eslintrc.json": "lint",
+    ".eslintignore": "lint",
+    "src/router/**/*": "router",
+    "src/**/*.styl": "stylus",
+    "src/**/*.css": "!stylus",
+    "src/sentry.js": "sentry"
+  },
 
-    // 完成渲染时的回调
+  // 完成渲染时的回调
 
-    complete: function(data, { chalk }) { // data, helpers 都是由vue-cli传入
-      const green = chalk.green
-  
-      sortDependencies(data, green)
-  
-      const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
-  
-      if (data.autoInstall) {
-        installDependencies(cwd, data.autoInstall, green)
-          .then(() => {
-            return runLintFix(cwd, data, green)
-          })
-          .then(() => {
-            printMessage(data, green)
-          })
-          .catch(e => {
-            console.log(chalk.red('Error:'), e)
-          })
-      } else {
-        printMessage(data, chalk)
-      }
+  complete: function (data, {
+    chalk
+  }) { // data, helpers 都是由vue-cli传入
+    const green = chalk.green
+
+    sortDependencies(data, green)
+
+    const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
+
+    if (data.autoInstall) {
+      installDependencies(cwd, data.autoInstall, green)
+        .then(() => {
+          return runLintFix(cwd, data, green)
+        })
+        .then(() => {
+          printMessage(data, green)
+        })
+        .catch(e => {
+          console.log(chalk.red('Error:'), e)
+        })
+    } else {
+      printMessage(data, chalk)
     }
+  }
 }
