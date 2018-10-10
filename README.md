@@ -1,4 +1,4 @@
-## vue-webpack-boilerplate
+## vue-webpack-template
 > This template based on vue2.0.
 > Acknowledgements: [vuejs-template](https://github.com/vuejs-templates/webpack).
 
