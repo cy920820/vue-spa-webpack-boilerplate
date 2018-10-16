@@ -10,12 +10,7 @@ exports.alias = [
 ]
 
 // apiPath
-let apiPath = null
-if (process.env.NODE_ENV === 'production') {
-  apiPath = '/'
-} else {
-  apiPath = ''
-}
+let apiPath = ''
 
 exports.apiPath = apiPath
 
