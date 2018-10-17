@@ -18,5 +18,6 @@
   },
   "homepage": "https://github.com/Cui-y/vue-webpack-template#readme",
   "devDependencies": {
+    "deploy-kit": "^3.5.0"
   }
 }
