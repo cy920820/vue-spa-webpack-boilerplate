@@ -40,5 +40,4 @@ vue init username/repo my-project
 - [ ] Sentry
 - [ ] Unit
 - [ ] E2e
-- [ ] Webpack 4.x
 - [ ] Routing lazy loading
