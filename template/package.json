@@ -24,7 +24,7 @@
     {{#sentry}}
     "raven-js": "^3.25.2",
     {{/sentry}}
-    "vue": "^2.5.16",
+    "vue": "^2.6.7",
     {{#router}}
     "vue-router": "^3.0.1"
     {{/router}}
@@ -56,7 +56,7 @@
     "inline-manifest-webpack-plugin": "^3.0.1",
     "url-loader": "^1.0.1",
     "file-loader": "^0.11.2",
-    "vue-template-compiler": "^2.5.16",
+    "vue-template-compiler": "^2.6.7",
     "vue-template-loader": "^0.4.1",
     "webpack": "^3.2.1",
     "webpack-dev-server": "^2.5.1",
