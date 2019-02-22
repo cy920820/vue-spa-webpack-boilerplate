@@ -4,6 +4,7 @@
 
 import Vue from 'vue'
 import App from 'views/app'
+import '../css/index.styl'
 {{#baobabui}}
 // 引入内部组件库
 import 'baobab-ui/lib/baobab-ui.css'
