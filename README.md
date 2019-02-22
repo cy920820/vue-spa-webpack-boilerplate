@@ -8,7 +8,7 @@
 
 ```
 $ npm install -g vue-cli
-$ vue init Cui-y/vue-webpack-template my-project
+$ vue init cy920820/vue-webpack-template my-project
 $ cd my-project
 $ npm start or yarn start (for dev)
 $ npm build or yarn build (for prod)
@@ -40,5 +40,4 @@ vue init username/repo my-project
 - [ ] Sentry
 - [ ] Unit
 - [ ] E2e
-- [ ] Webpack 4.x
 - [ ] Routing lazy loading
