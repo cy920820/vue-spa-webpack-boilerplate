@@ -12,6 +12,11 @@
     "deploy": "deploy-sftp",
     "hotdeploy": "node scripts/deploy.js"
   },
+  {{#lint}}
+  "pre-commit": [
+    "lint"
+  ],
+  {{/lint}}
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
@@ -44,6 +49,7 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
+    "pre-commit": "^1.2.2",
     {{/lint}}
     {{#stylus}}
     "stylus": "^0.54.5",
