@@ -73,6 +73,11 @@ module.exports = {
       message: 'Using baobab-ui?'
     },
 
+    vant: {
+      type: 'confirm',
+      message: 'Using vant?'
+    },
+
     lint: {
       type: 'confirm',
       message: 'Use ESLint to lint your code?'

@@ -23,6 +23,9 @@
     {{#baobabui}}
     "baobab-ui": "^1.0.7",
     {{/baobabui}}
+    {{#vant}}
+    "vant": "^1.6.9",
+    {{/vant}}
     {{#fastclick}}
     "fastclick": "^1.0.6",
     {{/fastclick}}
@@ -39,6 +42,9 @@
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.6.0",
+    {{#vant}}
+    "babel-plugin-import": "^1.11.0",
+    {{/vant}}
     "css-loader": "^0.28.4",
     "postcss-loader": "^2.1.5",
     "style-loader": "^0.21.0",
