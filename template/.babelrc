@@ -7,7 +7,7 @@
       "debug": false
     }]
   ],
-  {{#if_eq vant}}
+  {{#if vant}}
   "plugins": ["transform-object-rest-spread",[
     "import", {
       "libraryName": "vant",
@@ -17,5 +17,5 @@
   ]]
   {{else}}
   "plugins": ["transform-object-rest-spread"]
-  {{/if_eq}}
+  {{/if}}
 }

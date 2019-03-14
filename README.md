@@ -36,6 +36,11 @@ You can fork this repo to create your own boilerplate and use it with  `vue-cli`
 vue init username/repo my-project
 ```
 
+## Reference
+
+- [handlebarsjs](http://handlebarsjs.com/)
+- [vuejs-templates](http://vuejs-templates.github.io/webpack/)
+
 ## Todos
 - [ ] Sentry
 - [ ] Unit
