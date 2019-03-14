@@ -14,7 +14,7 @@
       "libraryDirectory": "es",
       "style": true
     }]
-  ],
+  ]
   {{else}}
   "plugins": ["transform-object-rest-spread"]
   {{/if}}
