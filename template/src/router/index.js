@@ -4,8 +4,9 @@
 
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from 'views/hello'
-import NotFount from 'views/404'
+// 异步组件结合webpack code-split实现路由懒加载
+const Hello = () => import(/* webpackChunkName: "Hello" */ 'views/hello')
+const NotFount = () => import(/* webpackChunkName: "NotFount" */ 'views/404')
 
 Vue.use(Router)
 

@@ -1,21 +1,31 @@
 {
   "presets": [
-    ["env", {
-      "modules": false,
-      "browsers": ["iOS >= 7", "Android >= 4.2"],
-      "useBuiltIns": false,
-      "debug": false
-    }]
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "browsers": ["iOS >= 7", "Android >= 4.2"],
+        "useBuiltIns": false,
+        "debug": false
+      }
+    ]
   ],
   {{#if vant}}
-  "plugins": ["transform-object-rest-spread", [
-    "import", {
-      "libraryName": "vant",
-      "libraryDirectory": "es",
-      "style": true
-    }]
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-syntax-dynamic-import",
+    [
+      "import", {
+        "libraryName": "vant",
+        "libraryDirectory": "es",
+        "style": true
+      }
+    ]
   ]
   {{else}}
-  "plugins": ["transform-object-rest-spread"]
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-syntax-dynamic-import"
+  ]
   {{/if}}
 }
