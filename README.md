@@ -45,4 +45,4 @@ vue init username/repo my-project
 - [ ] Sentry
 - [ ] Unit
 - [ ] E2e
-- [ ] Routing lazy loading
+- [x] Routing lazy loading
