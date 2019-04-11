@@ -3,7 +3,10 @@
  */
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const extractLibCss = new ExtractTextPlugin('css/lib.[contenthash].css')
-const extractAppCss = new ExtractTextPlugin('css/app.[contenthash].css')
+const extractAppCss = new ExtractTextPlugin({
+  filename: 'css/app.[contenthash].css',
+  allChunks: true
+})
 const utils = require('../utils')
 
 module.exports = (config) => {
