@@ -1,6 +1,3 @@
-/**
- * 统一维护extract-text-webpack-plugin插件
- */
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const extractLibCss = new ExtractTextPlugin('css/lib.[contenthash].css')
 const extractAppCss = new ExtractTextPlugin('css/app.[contenthash].css')

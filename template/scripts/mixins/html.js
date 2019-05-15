@@ -1,10 +1,6 @@
-/**
- * 统一维护html-webpack-plugin插件的模板文件
- */
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const config = require('../../config')
 
-// 当开发多页时，例如单独增加一个登陆单页时，方便统一管理html
 const htmlPlugins = [
   {
     title: 'project name',
