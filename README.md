@@ -36,7 +36,7 @@ $ npm build or yarn build (for prod)
 - 按需拆分、打包 js、css
   - entry, 多入口
   - ExtractTextPlugin
-- 提取 manifest、使用hash命名文件做持久缓存
+- 提取 manifest、使用hash命名文件做持久缓存
   - [name].[chunkhash].js
   - HashedModuleIdsPlugin
   - CommonsChunkPlugin
@@ -44,7 +44,7 @@ $ npm build or yarn build (for prod)
 - 全局配置路径别名、文件扩展名
   - resolve alias
   - resolve extensions
-- 自动引入资源到 html 文件
+- 自动引入资源到 html 文件
   - HtmlWebpackPlugin
 - 热更新、浏览器自动刷新
   - HotModuleReplacementPlugin
