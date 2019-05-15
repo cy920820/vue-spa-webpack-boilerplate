@@ -11,7 +11,7 @@
 # 全局安装 cli 2.x 脚手架工具
 $ npm install -g vue-cli
 # 远程下载模板目录
-$ vue init cy920820/vue-webpack-template my-project
+$ vue init cy920820/vue-spa-webpack-boilerplate my-project
 # 进入项目目录
 $ cd my-project
 # 开发 & 生产
