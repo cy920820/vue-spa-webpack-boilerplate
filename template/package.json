@@ -24,7 +24,7 @@
     "baobab-ui": "^1.0.7",
     {{/baobabui}}
     {{#vant}}
-    "vant": "^2.0.0",
+    "vant": "^2.0.8",
     {{/vant}}
     {{#fastclick}}
     "fastclick": "^1.0.6",
