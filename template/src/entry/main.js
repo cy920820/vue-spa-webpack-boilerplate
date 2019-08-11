@@ -15,6 +15,9 @@ Vue.use(BaobabUI)
 // 引入fastclick
 import FastClick from 'fastclick'
 FastClick.attach(document.body)
+FastClick.prototype.focus = (el) => {
+  el.focus()
+}
 {{/fastclick}}
 {{#router}}
 // 引入vue-router
